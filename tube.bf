@@ -26,8 +26,7 @@ DO
     ani=ani+ANISTEP: IF ani>2*PI THEN ani=0' ramp ani from 0 to 2*PI
     xtext=xtext+1: IF xtext>W THEN xtext=0' ramp xtext from 0 to W
     IF xtext MOD 20=0 THEN framesprite=1-framesprite' now and then toggle sprite frame 
-    SLEEP 10
-    SYNC
+    SYNC(60)
 LOOP
 
 SUB DrawCircles' draw background of circles rotating in time
